@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Materials Chemistry in UAE Aviation</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e1c2b;--panel:#152a3f;--ink:#f1ead9;--mut:#a9b7c6;--acc:#e0a458;--teal:#3cc3b2;--line:#2a4560;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f1e4;--panel:#fffdf7;--ink:#14263a;--mut:#4b5d70;--acc:#b06a12;--teal:#0d7f72;--line:#d9cfb8}}
+:root[data-theme="light"]{--bg:#f6f1e4;--panel:#fffdf7;--ink:#14263a;--mut:#4b5d70;--acc:#b06a12;--teal:#0d7f72;--line:#d9cfb8}
+:root[data-theme="dark"]{--bg:#0e1c2b;--panel:#152a3f;--ink:#f1ead9;--mut:#a9b7c6;--acc:#e0a458;--teal:#3cc3b2;--line:#2a4560}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Source Serif 4",Georgia,serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",Arial,sans-serif;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2rem,6vw,3.6rem);font-weight:800}h2{font-size:1.7rem;font-weight:800}h3{font-size:1.1rem;font-weight:600;color:var(--acc)}
+main{max-width:1050px;margin:auto;padding:0 18px 50px}
+header{padding:38px 0 10px}header p{color:var(--mut);max-width:62ch}
+section{margin-top:38px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+button,select,input{font:inherit;color:var(--ink)}
+.btn{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:7px 15px;cursor:pointer;font-size:.9rem}
+.btn[aria-pressed=true]{background:var(--acc);color:#14120c;border-color:var(--acc)}
+.btn:focus-visible,input:focus-visible,select:focus-visible,.hot:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.plane{width:100%;height:auto}
+.hot{cursor:pointer}.hot circle{fill:var(--teal);opacity:.9;stroke:var(--bg);stroke-width:3}.hot text{font:700 13px Arial;fill:#06121c;pointer-events:none}
+.hot[aria-pressed=true] circle{fill:var(--acc)}
+table{border-collapse:collapse;width:100%;font-size:.92rem}th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left}th{color:var(--acc);font-family:"Bricolage Grotesque",Arial,sans-serif}
+.scroll{overflow-x:auto}
+.bar{display:flex;align-items:center;gap:10px;margin:8px 0}.bar span.n{width:112px;font-size:.88rem}.bar .t{flex:1;background:var(--line);border-radius:6px;height:24px}.bar .f{height:100%;border-radius:6px;transition:width .5s;display:flex;align-items:center;justify-content:flex-end;padding-right:6px;font:700 12px Arial;color:#0a1520;min-width:34px}
+.pro{color:var(--teal)}.con{color:var(--acc)}
+.eq{font-family:"Source Serif 4",Georgia,serif;background:rgba(127,127,127,.12);padding:2px 8px;border-radius:6px}
+label{display:block;font-size:.9rem;color:var(--mut);margin-top:8px}
+input[type=number],select{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 8px;width:100%}
+small{color:var(--mut)}
+.big{font-family:"Bricolage Grotesque",Arial,sans-serif;font-size:1.6rem;color:var(--teal);font-weight:800}
+footer{margin-top:40px;color:var(--mut);font-size:.85rem}
+@media print{.noprint{display:none}body{background:#fff;color:#000}.card{break-inside:avoid}}
+@media (prefers-reduced-motion:reduce){.bar .f{transition:none}}
+</style></head><body><main>
+<header>
+<h1>The chemistry that keeps UAE aircraft in the sky</h1>
+<p>Done by Laith Mazen 11A . National Identity Mark: Citizenship &amp; Conservation. An investigation into the materials in aircraft flown by Emirates (Airbus A380, A350; Boeing 777) and Etihad Airways (Boeing 787 Dreamliner, Airbus A350). Tap the aircraft to explore each material.</p>
+<button class="btn noprint" id="theme" type="button">Switch light / dark</button>
+</header>
+
+<section>
+<h2>1. Explore the aircraft</h2>
+<div class="card">
+<svg class="plane" viewBox="0 0 700 250" role="img" aria-label="Side view of an airliner with four selectable material zones">
+<path d="M30 130 Q40 90 120 84 L560 84 Q640 90 672 128 Q640 160 560 166 L120 166 Q45 165 30 130Z" fill="none" stroke="var(--mut)" stroke-width="3"/>
+<path d="M300 150 L470 215 L500 215 L440 150Z" fill="none" stroke="var(--mut)" stroke-width="3"/>
+<path d="M590 90 L640 30 L668 30 L650 92Z" fill="none" stroke="var(--mut)" stroke-width="3"/>
+<ellipse cx="380" cy="190" rx="34" ry="14" fill="none" stroke="var(--mut)" stroke-width="3"/>
+<line x1="270" y1="166" x2="270" y2="212" stroke="var(--mut)" stroke-width="4"/><circle cx="270" cy="220" r="9" fill="none" stroke="var(--mut)" stroke-width="3"/>
+<g class="hot" tabindex="0" role="button" aria-pressed="false" data-m="cfrp" aria-label="Carbon fibre composite: fuselage"><circle cx="200" cy="125" r="20"/><text x="189" y="130">CF</text></g>
+<g class="hot" tabindex="0" role="button" aria-pressed="false" data-m="al" aria-label="Aluminium alloy: wing and skin panels"><circle cx="420" cy="165" r="20"/><text x="410" y="170">Al</text></g>
+<g class="hot" tabindex="0" role="button" aria-pressed="false" data-m="ti" aria-label="Titanium alloy: engine and fasteners"><circle cx="380" cy="190" r="17" style="transform-origin:center"/><text x="372" y="195">Ti</text></g>
+<g class="hot" tabindex="0" role="button" aria-pressed="false" data-m="steel" aria-label="High-strength steel: landing gear"><circle cx="270" cy="190" r="17"/><text x="259" y="195">Fe</text></g>
+</svg>
+<div class="row" id="tabs" role="group" aria-label="Choose material"></div>
+<div id="mat" class="grid" aria-live="polite"></div>
+</div>
+</section>
+
+<section>
+<h2>2. Structure, bonding and properties</h2>
+<div class="grid" id="explain"></div>
+</section>
+
+<section>
+<h2>3. Compare the materials</h2>
+<div class="card">
+<div class="row" id="propbtns" role="group" aria-label="Choose property"></div>
+<div id="bars"></div><small id="barnote"></small>
+<div class="scroll" style="margin-top:14px"><table>
+<tr><th>Material</th><th>Density (g/cm³)</th><th>Strength (MPa)</th><th>Corrosion resistance</th><th>Durability</th></tr>
+<tbody id="tbl"></tbody></table></div>
+<small>Typical values for the alloys/laminates named; exact figures vary with heat treatment and layup. Specific strength = strength ÷ density.</small>
+</div>
+</section>
+
+<section>
+<h2>4. Quantitative chemistry</h2>
+<div class="grid">
+<div class="card">
+<h3>Worked example: Ti-6Al-4V (1000 g)</h3>
+<p>Composition by mass: 6% Al, 4% V, 90% Ti (the alloy used in engine parts and fasteners).</p>
+<p>Moles = mass ÷ A<sub>r</sub><br>
+Ti: 900 ÷ 47.87 = <b>18.80 mol</b><br>Al: 60 ÷ 26.98 = <b>2.22 mol</b><br>V: 40 ÷ 50.94 = <b>0.785 mol</b><br>
+Total = 21.81 mol, so atom % Ti = 18.80 ÷ 21.81 = <b>86.2%</b>, Al = <b>10.2%</b>, V = <b>3.6%</b>.</p>
+<p>Although Al is only 6% by <i>mass</i>, it is about 10% of the <i>atoms</i>, because its atoms are lighter.</p>
+</div>
+<div class="card">
+<h3>Try it: alloy calculator</h3>
+<label for="alloy">Alloy</label><select id="alloy"></select>
+<label for="amass">Sample mass (g)</label><input id="amass" type="number" min="1" value="1000">
+<div class="scroll"><table><tr><th>Element</th><th>Mass %</th><th>Mass (g)</th><th>Moles</th><th>Atom %</th></tr><tbody id="atbl"></tbody></table></div>
+<small id="asrc"></small>
+</div>
+</div>
+</section>
+
+<section>
+<h2>5. Why lightweight matters</h2>
+<div class="grid">
+<div class="card"><p>For level flight, lift must equal weight. A heavier aircraft needs more lift, so a larger angle of attack and more drag, so more thrust, so more fuel burned. Extra fuel is itself extra weight, which is why savings snowball. Fuel burned releases CO₂: about 3.16 kg of CO₂ per 1 kg of jet fuel (ICAO factor).</p>
+<p>Composites make up roughly 50% of the Boeing 787 and about 53% of the Airbus A350 by weight, versus around 25% on the A380. That is a key reason the newer types burn less fuel per passenger.</p></div>
+<div class="card">
+<h3>Try it: replace a steel part</h3>
+<label for="smass">Steel part mass (kg)</label><input id="smass" type="number" min="1" value="1000">
+<label for="rep">Replace with equal volume of</label><select id="rep"><option value="2.70">Aluminium alloy (2.70 g/cm³)</option><option value="4.43">Titanium alloy (4.43 g/cm³)</option><option value="1.60" selected>Carbon-fibre composite (1.60 g/cm³)</option></select>
+<label for="fuel">Assumed fuel saved per kg removed, per flight (kg) <small>(illustrative, adjust it)</small></label><input id="fuel" type="number" min="0" step="0.1" value="1.5">
+<p>Volume = 1000 ÷ 7.85 g/cm³ steel density. New mass = volume × new density.</p>
+<p>Mass saved: <span class="big" id="saved"></span><br>Fuel saved per flight: <b id="fs"></b> &middot; CO₂ avoided per flight: <b id="co2"></b></p>
+</div></div>
+</section>
+
+<section>
+<h2>6. Sustainability evaluation</h2>
+<div class="card"><div class="row" id="susbtns" role="group" aria-label="Choose material"></div><div id="sus" aria-live="polite"></div></div>
+<div class="card" style="margin-top:16px">
+<h3>UAE connection</h3>
+<p>The UAE is aiming for net zero by 2050, and Emirates and Etihad are both investing in fuel-efficient fleets and sustainable aviation fuel. Etihad's Greenliner programme uses commercial flights to test efficiency ideas. The UAE also makes aluminium at scale: Emirates Global Aluminium (EGA) launched CelestiAL, aluminium smelted with solar power, and recycled aluminium needs only around 5% of the energy of primary production.</p>
+</div>
+</section>
+
+<section>
+<h2>7. Final reflection</h2>
+<div class="card">
+<p><b>How can developments in materials chemistry contribute to more sustainable aviation in the UAE?</b></p>
+<p>Every kilogram removed from an aircraft saves fuel on every flight for decades, so lighter materials cut emissions directly. Chemistry can go further: (1) new aluminium-lithium alloys are lighter and stiffer; (2) recyclable thermoplastic composites and chemical recycling of epoxy resins could solve the composite end-of-life problem; (3) smelting aluminium and titanium with solar power, as EGA already does for aluminium, lowers the carbon footprint at the source; (4) better corrosion-resistant coatings extend aircraft life and reduce toxic chromate use. A UAE that combines modern fleets, renewable-powered metals and closed-loop recycling can make its aviation sector a model for the region. Materials alone will not achieve net zero, so they must work together with SAF and efficient operations.</p>
+</div></section>
+
+<footer>
+<p><b>Sources to cite:</b> Boeing 787 and Airbus A350 materials pages; Emirates and Etihad fleet and sustainability pages; ICAO carbon emissions calculator (3.16 kg CO₂/kg fuel); EGA CelestiAL announcement; UAE Net Zero 2050 strategic initiative; ASM Handbook / MatWeb for alloy data.</p>
+</footer>
+</main>
+<script>
+const M={
+al:{n:"Aluminium alloy 7075-T6",short:"Aluminium alloy",c:"#8fb8de",where:"Wing skins, stringers, some fuselage frames (A380, 777)",comp:"Al ~90%, Zn 5.6%, Mg 2.5%, Cu 1.6%",d:2.70,s:570,sp:211,cr:3,du:3,
+b:"Metallic bonding: Al³⁺ ions in a lattice surrounded by delocalised electrons. Alloying atoms (Zn, Mg, Cu) are different sizes, so they distort the layers and stop them sliding. This makes the alloy much harder than pure Al. Al is in Group 3 with a low relative atomic mass, so its density is low. Al reacts with oxygen to form a thin, tough Al₂O₃ layer that protects the metal underneath.",
+pro:"Highly recyclable: recycling uses ~5% of the energy of primary smelting. Light and cheap. UAE produces aluminium (EGA).",con:"Primary smelting (Hall–Héroult electrolysis of Al₂O₃) uses huge amounts of electricity. Lower fatigue resistance than composites. Cu-rich alloys corrode more."},
+ti:{n:"Titanium alloy Ti-6Al-4V",short:"Titanium alloy",c:"#c9a6e8",where:"Engine fan/compressor parts, pylons, landing-gear beams, fasteners",comp:"Ti 90%, Al 6%, V 4%",d:4.43,s:950,sp:214,cr:5,du:5,
+b:"Metallic bonding, but Ti has more delocalised d and s electrons per atom (4 outer electrons), so the metallic bonds are stronger. Al stabilises the hexagonal close-packed (α) phase and V stabilises the body-centred (β) phase; the mix of both phases gives strength and toughness. A TiO₂ film forms instantly and gives excellent corrosion resistance. It does not react galvanically with carbon fibre.",
+pro:"Outstanding corrosion and fatigue resistance means long life. Works at high engine temperatures. Compatible with composites.",con:"Kroll process (TiCl₄ + 2Mg → Ti + 2MgCl₂) is energy-intensive and slow. Expensive; scrap must be recycled carefully."},
+steel:{n:"High-strength steel 4340 / 300M",short:"Steel",c:"#d98c6b",where:"Landing gear, wing–fuselage attachment fittings, engine shafts",comp:"Fe ~96%, C 0.4%, Ni 1.8%, Cr 0.8%, Mn 0.7%, Mo 0.25%",d:7.85,s:1900,sp:242,cr:2,du:4,
+b:"Metallic bonding in iron. Small carbon atoms sit in gaps (interstitial sites) between iron atoms and lock the layers in place, especially after heat treatment. Ni improves toughness; Cr and Mo increase hardenability. Iron rusts because Fe → Fe³⁺ + 3e⁻ and it forms porous Fe₂O₃·xH₂O that flakes off, so steel parts are coated with cadmium or zinc-nickel.",
+pro:"Very high strength means small, compact parts where space is limited. Fully recyclable and magnetic separation is easy.",con:"Highest density (7.85 g/cm³), so it is used only where strength is essential. Rusts without coatings; some coatings are toxic."},
+cfrp:{n:"Carbon-fibre reinforced polymer (CFRP)",short:"Carbon-fibre composite",c:"#7fd6a0",where:"Fuselage barrels, wings, tail (787, A350), parts of A380",comp:"~60% carbon fibre (C) by volume in epoxy resin",d:1.60,s:1000,sp:625,cr:4,du:4,
+b:"Two materials: carbon fibres and an epoxy matrix. In each fibre, carbon atoms form strong covalent bonds in hexagonal sheets (like graphite), aligned along the fibre, giving huge strength in that direction. The epoxy is a cross-linked covalent polymer that holds fibres in place and shares the load. Layers are stacked at different angles. No free-electron ‘sea’, so it does not corrode or conduct galvanic current internally.",
+pro:"Lowest density, so biggest fuel saving. Excellent fatigue resistance. Fewer fasteners and joints.",con:"Thermoset epoxy cannot be melted and reshaped, so recycling is difficult. Fibre production needs high heat (over 1000 °C). Impact damage can hide inside. Causes galvanic corrosion of aluminium if in direct contact."}
+};
+const keys=Object.keys(M);let cur="al",prop="d",susCur="al";
+const $=id=>document.getElementById(id);
+function lattice(k){
+ const W=260,H=200;let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Atomic model of ${M[k].short}" style="width:100%;max-width:300px;background:rgba(127,127,127,.1);border-radius:10px">`;
+ if(k=="cfrp"){
+  for(let r=0;r<6;r++){s+=`<rect x="10" y="${14+r*30}" width="240" height="14" rx="7" fill="#444" opacity=".85"/>`;}
+  s+=`<rect x="0" y="0" width="${W}" height="${H}" fill="#7fd6a0" opacity=".12"/>`;
+  s+=`<text x="16" y="${H-4}" font-size="11" fill="currentColor">carbon fibres (grey) in epoxy matrix (green)</text>`;
+ }else{
+  const rad=k=="steel"?15:k=="ti"?14:16;
+  for(let r=0;r<5;r++)for(let c=0;c<7;c++){
+   const off=(r%2)*rad;const x=20+c*33+off*1.0,y=24+r*33;
+   const foreign=(r*7+c)%11==4;
+   s+=`<circle cx="${x}" cy="${y}" r="${foreign?rad+3:rad}" fill="${foreign?"#f2c94c":M[k].c}" stroke="#0006"/>`;
+   if(k=="steel"&&(r*7+c)%9==2)s+=`<circle cx="${x+16}" cy="${y+16}" r="5" fill="#222"/>`;
+  }
+  s+=`<text x="10" y="${H-4}" font-size="11" fill="currentColor">${k=="steel"?"Fe atoms, small C atoms (black) in gaps":"host atoms with larger alloying atoms (gold)"}</text>`;
+ }
+ return s+"</svg>";
+}
+function showMat(k){cur=k;const m=M[k];
+ document.querySelectorAll(".hot").forEach(h=>h.setAttribute("aria-pressed",h.dataset.m==k));
+ document.querySelectorAll("#tabs .btn").forEach(b=>b.setAttribute("aria-pressed",b.dataset.m==k));
+ $("mat").innerHTML=`<div><h3>${m.n}</h3><p><b>Composition:</b> ${m.comp}</p><p><b>Where used:</b> ${m.where}</p><p><b>Density:</b> ${m.d} g/cm³ &middot; <b>Strength:</b> ~${m.s} MPa</p></div><div>${lattice(k)}</div>`;
+}
+keys.forEach(k=>{const b=document.createElement("button");b.className="btn";b.type="button";b.dataset.m=k;b.textContent=M[k].short;b.onclick=()=>showMat(k);$("tabs").appendChild(b)});
+document.querySelectorAll(".hot").forEach(h=>{h.onclick=()=>showMat(h.dataset.m);h.onkeydown=e=>{if(e.key=="Enter"||e.key==" "){e.preventDefault();showMat(h.dataset.m)}}});
+$("explain").innerHTML=keys.map(k=>`<div class="card"><h3>${M[k].n}</h3><p>${M[k].b}</p></div>`).join("");
+const P={d:{l:"Density (g/cm³)",f:"d",note:"Lower is better for fuel efficiency."},s:{l:"Tensile strength (MPa)",f:"s",note:"Higher means it can carry more load."},sp:{l:"Specific strength (MPa ÷ g/cm³)",f:"sp",note:"Strength per unit density: the key measure for aircraft."},cr:{l:"Corrosion resistance (1–5)",f:"cr",note:"Qualitative rating. CFRP does not corrode itself but causes galvanic corrosion in contact with aluminium."},du:{l:"Fatigue durability (1–5)",f:"du",note:"Qualitative rating of resistance to repeated stress cycles."}};
+function bars(){const p=P[prop],mx=Math.max(...keys.map(k=>M[k][p.f]));
+ $("bars").innerHTML=keys.map(k=>`<div class="bar"><span class="n">${M[k].short}</span><div class="t"><div class="f" style="width:${M[k][p.f]/mx*100}%;background:${M[k].c}">${M[k][p.f]}</div></div></div>`).join("");
+ $("barnote").textContent=p.l+". "+p.note;
+ document.querySelectorAll("#propbtns .btn").forEach(b=>b.setAttribute("aria-pressed",b.dataset.p==prop));}
+Object.keys(P).forEach(k=>{const b=document.createElement("button");b.className="btn";b.type="button";b.dataset.p=k;b.textContent=P[k].l.split(" (")[0];b.onclick=()=>{prop=k;bars()};$("propbtns").appendChild(b)});
+const lab=["","Poor","Fair","Good","Very good","Excellent"];
+$("tbl").innerHTML=keys.map(k=>`<tr><td>${M[k].short}</td><td>${M[k].d}</td><td>${M[k].s}</td><td>${lab[M[k].cr]}</td><td>${lab[M[k].du]}</td></tr>`).join("");
+const A={"7075 aluminium":[["Al",26.98,90.07],["Zn",65.38,5.6],["Mg",24.31,2.5],["Cu",63.55,1.6],["Cr",52.00,0.23]],
+"Ti-6Al-4V":[["Ti",47.87,90],["Al",26.98,6],["V",50.94,4]],
+"4340 steel":[["Fe",55.85,96.05],["C",12.01,0.4],["Mn",54.94,0.7],["Ni",58.69,1.8],["Cr",52.00,0.8],["Mo",95.95,0.25]]};
+Object.keys(A).forEach(a=>$("alloy").add(new Option(a,a)));$("alloy").value="Ti-6Al-4V";
+function alloy(){const m=+$("amass").value||0,e=A[$("alloy").value];const mol=e.map(x=>m*x[2]/100/x[1]),t=mol.reduce((a,b)=>a+b,0);
+ $("atbl").innerHTML=e.map((x,i)=>`<tr><td>${x[0]}</td><td>${x[2]}</td><td>${(m*x[2]/100).toFixed(1)}</td><td>${mol[i].toFixed(3)}</td><td>${(mol[i]/t*100).toFixed(1)}</td></tr>`).join("");
+ $("asrc").textContent="Typical nominal composition. A_r values: standard atomic weights.";}
+$("alloy").onchange=alloy;$("amass").oninput=alloy;
+function wt(){const m=+$("smass").value||0,r=+$("rep").value,f=+$("fuel").value||0;const nm=m/7.85*r,sv=m-nm;
+ $("saved").textContent=sv.toFixed(0)+" kg ("+(sv/m*100).toFixed(0)+"%)";$("fs").textContent=(sv*f).toFixed(0)+" kg";$("co2").textContent=(sv*f*3.16).toFixed(0)+" kg";}
+["smass","rep","fuel"].forEach(i=>$(i).oninput=wt);
+function sus(){$("sus").innerHTML=`<p class="pro"><b>Advantages:</b> ${M[susCur].pro}</p><p class="con"><b>Limitations:</b> ${M[susCur].con}</p>`;
+ document.querySelectorAll("#susbtns .btn").forEach(b=>b.setAttribute("aria-pressed",b.dataset.m==susCur));}
+keys.forEach(k=>{const b=document.createElement("button");b.className="btn";b.type="button";b.dataset.m=k;b.textContent=M[k].short;b.onclick=()=>{susCur=k;sus()};$("susbtns").appendChild(b)});
+$("theme").onclick=()=>{const r=document.documentElement,d=getComputedStyle(r).getPropertyValue("--bg").trim()=="#0e1c2b";r.dataset.theme=d?"light":"dark"};
+showMat("al");bars();alloy();wt();sus();
+</script></body></html>
